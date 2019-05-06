@@ -41,7 +41,7 @@ a2enmod php7.0
 # Install XDebug
 apt-get install -y php7.0-dev
 cd /usr/lib
-git clone git://github.com/xdebug/xdebug.git
+git clone https://github.com/xdebug/xdebug.git
 cd xdebug
 phpize
 ./configure --enable-xdebug
