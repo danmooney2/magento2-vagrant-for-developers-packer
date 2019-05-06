@@ -64,6 +64,10 @@ update-alternatives --set php /usr/bin/php7.0
 service apache2 restart
 
 # Setup MySQL
+# Necessary to install 5.6: https://askubuntu.com/a/765458/167718
+add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty universe'
+apt-get update
+
 debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
 apt-get install -q -y mysql-server-5.6 mysql-client-5.6
@@ -90,6 +94,8 @@ invoke-rc.d rabbitmq-server start
 apt-get install -y varnish
 
 # Install ElasticSearch
+add-apt-repository ppa:openjdk-r/ppa
+apt-get update
 apt-get install -y openjdk-7-jre
 wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.deb
 dpkg -i elasticsearch-1.7.2.deb
