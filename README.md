@@ -5,7 +5,7 @@ Existing versions of this box can be found at the official Vagrant [box hosting]
 
 ## What you get
 
-**magento2.ubuntu-14.04** box based on **ubuntu/trusty64** box with software installed by [scripts/vagrant/install_magento_environment.sh](scripts/vagrant/install_magento_environment.sh).
+**magento2.ubuntu-16.04** box based on **ubuntu/xenial64** box with software installed by [scripts/vagrant/install_magento_environment.sh](scripts/vagrant/install_magento_environment.sh).
 
 ## Requirements
 
